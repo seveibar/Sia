@@ -13,20 +13,20 @@ import (
 // Though these are variables, they should never be changed during runtime.
 // They get altered during testing.
 var (
-	BlockFrequency  = Timestamp(10)          // In seconds.
-	TargetWindow    = BlockHeight(80)        // Number of blocks to use when calculating the target.
+	BlockFrequency  = Timestamp(600)         // In seconds.
+	TargetWindow    = BlockHeight(2000)      // Number of blocks to use when calculating the target.
 	FutureThreshold = Timestamp(3 * 60 * 60) // Seconds into the future block timestamps are valid.
-	RootTarget      = Target{0, 0, 32}
+	RootTarget      = Target{0, 0, 16}
 	RootDepth       = Target{255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255}
 
-	MaxAdjustmentUp   = big.NewRat(103, 100)
-	MaxAdjustmentDown = big.NewRat(97, 100)
+	MaxAdjustmentUp   = big.NewRat(1001, 1000)
+	MaxAdjustmentDown = big.NewRat(999, 1000)
 
 	InitialCoinbase = Currency(300000)
 	MinimumCoinbase = Currency(30000)
 
 	GenesisAddress   = CoinAddress{}         // TODO: NEED TO CREATE A HARDCODED ADDRESS.
-	GenesisTimestamp = Timestamp(1417070299) // Approx. 1:47pm EST Nov. 13th, 2014
+	GenesisTimestamp = Timestamp(1418363095) // Approx. 12:46am, EST., December 12, 2014.
 
 	DEBUG = false
 )
